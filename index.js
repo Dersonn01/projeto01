@@ -39,7 +39,7 @@ async function main(){
   //Read All -> [GET] /herois
   app.get("/herois", async function (req,res){
     const itens = await collection.find().toArray();
-    res.send(itens)
+    res.send(itens.nome)
   })
 
   //Create -> [POST] /herois
